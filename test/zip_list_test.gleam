@@ -114,11 +114,11 @@ pub fn next_try_overflow_test() {
   |> birdie.snap("next_try_overflow")
 }
 
-pub fn next_warp_test() {
+pub fn next_wrap_test() {
   zip_list.new([1, 2, 3], 4, [])
-  |> zip_list.next_warp
+  |> zip_list.next_wrap
   |> string.inspect
-  |> birdie.snap("next_warp")
+  |> birdie.snap("next_wrap")
 }
 
 pub fn previous_test() {
@@ -142,11 +142,11 @@ pub fn previous_try_overflow_test() {
   |> birdie.snap("previous_try_overflow")
 }
 
-pub fn previous_warp_test() {
+pub fn previous_wrap_test() {
   zip_list.new([], 4, [5, 6, 7])
-  |> zip_list.previous_warp
+  |> zip_list.previous_wrap
   |> string.inspect
-  |> birdie.snap("previous_warp")
+  |> birdie.snap("previous_wrap")
 }
 
 pub fn append_next_test() {

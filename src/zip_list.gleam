@@ -255,13 +255,13 @@ pub fn next_try(zip_list: ZipList(a)) -> Result(ZipList(a), Nil) {
 /// ## Examples
 /// ```gleam
 /// let numbers = new([1, 2], 3, [4, 5])
-/// next_warp(numbers) == new([1, 2, 3], 4, [5])
+/// next_wrap(numbers) == new([1, 2, 3], 4, [5])
 /// ```
 /// ```gleam
 /// let numbers = new([1, 2, 3, 4, 5], 6, [])
-/// next_warp(numbers) == new([], 1, [2, 3, 4, 5, 6])
+/// next_wrap(numbers) == new([], 1, [2, 3, 4, 5, 6])
 /// ```
-pub fn next_warp(zip_list: ZipList(a)) -> ZipList(a) {
+pub fn next_wrap(zip_list: ZipList(a)) -> ZipList(a) {
   case next_try(zip_list) {
     Ok(new_zip_list) -> new_zip_list
     Error(_) -> first(zip_list)
@@ -319,13 +319,13 @@ pub fn previous_try(zip_list: ZipList(a)) -> Result(ZipList(a), Nil) {
 /// ## Examples
 /// ```gleam
 /// let numbers = new([1, 2], 3, [4, 5])
-/// previous_warp(numbers) == new([1, 2, 3], 4, [5])
+/// previous_wrap(numbers) == new([1, 2, 3], 4, [5])
 /// ```
 /// ```gleam
 /// let numbers = new([], 1, [2, 3, 4, 5])
-/// previous_warp(numbers) == new([1, 2, 3, 4], 5, [])
+/// previous_wrap(numbers) == new([1, 2, 3, 4], 5, [])
 /// ```
-pub fn previous_warp(zip_list: ZipList(a)) -> ZipList(a) {
+pub fn previous_wrap(zip_list: ZipList(a)) -> ZipList(a) {
   case previous_try(zip_list) {
     Ok(new_zip_list) -> new_zip_list
     Error(_) -> last(zip_list)
