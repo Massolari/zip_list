@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: singleton
+file: ./test/zip_list_test.gleam
+test_name: singleton_test
+---
+ZipList([], 1, [])

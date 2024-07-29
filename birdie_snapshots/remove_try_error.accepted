@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: remove_try_error
+file: ./test/zip_list_test.gleam
+test_name: remove_try_error_test
+---
+Error(Nil)

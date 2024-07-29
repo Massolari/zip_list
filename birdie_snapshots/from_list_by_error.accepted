@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: from_list_by_error
+file: ./test/zip_list_test.gleam
+test_name: from_list_by_error_test
+---
+Error(Nil)

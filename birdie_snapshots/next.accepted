@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: next
+file: ./test/zip_list_test.gleam
+test_name: next_test
+---
+ZipList([1, 2, 3, 4], 5, [6, 7])

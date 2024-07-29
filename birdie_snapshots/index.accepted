@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: index
+file: ./test/zip_list_test.gleam
+test_name: index_test
+---
+3

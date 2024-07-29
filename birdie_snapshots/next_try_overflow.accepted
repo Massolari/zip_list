@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: next_try_overflow
+file: ./test/zip_list_test.gleam
+test_name: next_try_overflow_test
+---
+Error(Nil)

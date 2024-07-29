@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: remove_backwards
+file: ./test/zip_list_test.gleam
+test_name: remove_backwards_test
+---
+ZipList([1, 2], 3, [5, 6, 7])

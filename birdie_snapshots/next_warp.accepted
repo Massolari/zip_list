@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: next_warp
+file: ./test/zip_list_test.gleam
+test_name: next_warp_test
+---
+ZipList([], 1, [2, 3, 4])

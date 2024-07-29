@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: get_previous_error
+file: ./test/zip_list_test.gleam
+test_name: get_previous_error_test
+---
+Error(Nil)

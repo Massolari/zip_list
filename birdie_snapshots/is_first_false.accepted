@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: is_first_false
+file: ./test/zip_list_test.gleam
+test_name: is_first_false_test
+---
+False
