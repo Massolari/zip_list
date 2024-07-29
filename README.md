@@ -13,7 +13,7 @@ It is useful for various implementations, such as:
 ## Installation
 
 ```sh
-gleam add zip_list@1
+gleam add zip_list
 ```
 
 ## Usage
