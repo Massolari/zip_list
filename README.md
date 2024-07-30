@@ -23,10 +23,11 @@ import gleam/io
 import zip_list
 
 pub fn main() {
-    zip_list.new([], "Dog", ["Cat", "Bird", "Fish"])
-    |> zip_list.next
+    let animals =
+        zip_list.new([], "Dog", ["Cat", "Bird", "Fish"])
+        |> zip_list.next
 
-    io.println("You selected: " <> zip_list.current) // => "You selected: Cat"
+    io.println("You selected: " <> zip_list.current(animals)) // => "You selected: Cat"
 }
 ```
 
