@@ -65,6 +65,13 @@ pub fn first_test() {
   |> birdie.snap("first")
 }
 
+pub fn first_from_first_test() {
+  zip_list.new([], 1, [2, 3, 4, 5])
+  |> zip_list.first
+  |> string.inspect
+  |> birdie.snap("first_from_first")
+}
+
 pub fn forward_test() {
   zip_list.new([1, 2, 3], 4, [5, 6, 7])
   |> zip_list.forward(2)
@@ -91,6 +98,13 @@ pub fn last_test() {
   |> zip_list.last
   |> string.inspect
   |> birdie.snap("last")
+}
+
+pub fn last_from_last_test() {
+  zip_list.new([1, 2, 3, 4], 5, [])
+  |> zip_list.last
+  |> string.inspect
+  |> birdie.snap("last_from_last")
 }
 
 pub fn next_test() {
