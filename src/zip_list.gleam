@@ -376,7 +376,7 @@ pub fn append_previous(zip_list: ZipList(a), previous: List(a)) -> ZipList(a) {
 ///   }
 /// }) == new([2, 4], 30, [8, 10])
 /// ```
-pub fn current_map(zip_list: ZipList(a), f: fn(a, Bool) -> a) -> ZipList(a) {
+pub fn current_map(zip_list: ZipList(a), f: fn(a, Bool) -> b) -> ZipList(b) {
   let f_with_flag = fn(element) { f(element, False) }
 
   ZipList(

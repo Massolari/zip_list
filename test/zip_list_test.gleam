@@ -175,6 +175,18 @@ pub fn current_map_test() {
   |> birdie.snap("current_map")
 }
 
+pub fn current_map_different_type_test() {
+  zip_list.new([1, 2, 3], 4, [5, 6, 7])
+  |> zip_list.current_map(fn(x, is_current) {
+    case is_current {
+      True -> "is_current"
+      False -> int.to_string(x)
+    }
+  })
+  |> string.inspect
+  |> birdie.snap("current_map_different_type")
+}
+
 pub fn filter_test() {
   zip_list.new([1, 2, 3], 4, [5, 6, 7])
   |> zip_list.filter(int.is_odd)
