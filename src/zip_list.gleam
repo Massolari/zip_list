@@ -125,16 +125,15 @@ pub fn backwards(zip_list: ZipList(a), times: Int) -> ZipList(a) {
 /// first(numbers) == new([], 1, [2, 3, 4, 5])
 /// ```
 pub fn first(zip_list: ZipList(a)) -> ZipList(a) {
-  let #(new_current, previous_tail) = case zip_list.previous {
-    [] -> #(zip_list.current, [])
-    [head, ..tail] -> #(head, tail)
+  case zip_list.previous {
+    [] -> zip_list
+    [head, ..tail] ->
+      ZipList(
+        previous: [],
+        current: head,
+        next: list.append(tail, [zip_list.current, ..zip_list.next]),
+      )
   }
-
-  ZipList(
-    previous: [],
-    current: new_current,
-    next: list.append(previous_tail, [zip_list.current, ..zip_list.next]),
-  )
 }
 
 /// Move the cursor N elements forward
@@ -195,16 +194,18 @@ pub fn jump(zip_list: ZipList(a), index: Int) -> ZipList(a) {
 /// last(numbers) == new([1, 2, 3, 4], 5, [])
 /// ```
 pub fn last(zip_list: ZipList(a)) -> ZipList(a) {
-  let #(new_current, next_tail) = case list.reverse(zip_list.next) {
-    [] -> #(zip_list.current, [])
-    [head, ..tail] -> #(head, list.reverse(tail))
+  case list.reverse(zip_list.next) {
+    [] -> zip_list
+    [head, ..tail] ->
+      ZipList(
+        previous: list.append(zip_list.previous, [
+          zip_list.current,
+          ..list.reverse(tail)
+        ]),
+        current: head,
+        next: [],
+      )
   }
-
-  ZipList(
-    previous: list.append(zip_list.previous, [zip_list.current, ..next_tail]),
-    current: new_current,
-    next: [],
-  )
 }
 
 /// Move the cursor to the next element
