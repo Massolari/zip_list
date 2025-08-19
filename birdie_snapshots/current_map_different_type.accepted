@@ -1,0 +1,7 @@
+---
+version: 1.1.8
+title: current_map_different_type
+file: ./test/zip_list_test.gleam
+test_name: current_map_different_type_test
+---
+ZipList(["1", "2", "3"], "is_current", ["5", "6", "7"])
